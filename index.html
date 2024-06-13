@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Generator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input[type="file"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #302c2c;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            background-color:hsl(227, 100%, 70%);
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            background-color: #f1f1f1;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(to right, #36d1dc, #5b86e5);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #5b86e5, #36d1dc);
+        }
+
+        .alert {
+            margin-top: 20px;
+            padding: 10px;
+            color: #c81919;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .alert-error {
+            background-color: #e74c3c;
+        }
+
+        .alert-success {
+            background-color: #2ecc71;
+        }
+
+        /* Responsive design */
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            input[type="file"], select, button {
+                font-size: 14px;
+            }
+
+            .alert {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Report Generator</h1>
+        <form id="reportForm" action="/submit" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="dataSource">Upload CSV File:</label>
+                <input type="file" id="dataSource" name="dataSource" accept=".csv" required>
+            </div>
+        </form>
+           
+         
+            <form action="https://divyadarshini08.github.io/HTML-DR/">
+                <input type="submit" value="Generate Daily Report">
+            </form>
+            <form action="https://divyadarshini08.github.io/html-weekly-report/">
+                <input type="submit" value="Generate Weekly Report">
+            </form>
+            <form action="https://divyadarshini08.github.io/html-monthly-rep/">
+                <input type="submit" value="Generate Monthly Report">
+            </form>
+         
+        
+            <div id="alert" class="alert" style="display: none;"></div>
+    </div>
+</body>
+</html>
+
+
+
+
